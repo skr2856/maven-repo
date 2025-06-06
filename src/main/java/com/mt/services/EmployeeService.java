@@ -1,8 +1,8 @@
 package com.mt.services;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,18 +15,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/employee")
 public class EmployeeService {
 
-	
-	@RequestMapping(value = "/getEmployeeDetails", method = RequestMethod.GET)
-	@ResponseBody
-	String uploadImage(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession)
-			throws JSONException {
+    @RequestMapping(value = "/getEmployeeDetails", method = RequestMethod.GET)
+    @ResponseBody
+    String uploadImage(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession)
+            throws JSONException {
 
-		JSONObject js = new JSONObject();
-		js.put("Name", "skyDevops Technologies");
-		js.put("Calling Name", "bharath");
-		js.put("Places he like", "karnataka");
+        JSONObject js = new JSONObject();
+        js.put("Name", "skyDevops Technologies");
+        js.put("Calling Name", "bharath");
+        js.put("Places he like", "karnataka");
 
-		return js.toString();
+        return js.toString();
+    }
 }
-}
-
